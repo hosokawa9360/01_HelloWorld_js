@@ -1,6 +1,7 @@
 //resource.js
 var res = {
     HelloWorld_png : "res/HelloWorld.png",
+    Cocos_png : "res/cocos.png",
 };
 
 var g_resources = [];
