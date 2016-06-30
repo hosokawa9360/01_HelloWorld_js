@@ -12,6 +12,11 @@ var MyLayer = cc.Layer.extend({
         var label = cc.LabelTTF.create("Hello World", "Arial", 40);
         label.setPosition(size.width / 2, size.height / 2);
         this.addChild(label, 1);
+        //add code
+        var spriteB = cc.Sprite.create(res.Cocos_png);
+       　spriteB.setPosition(size.width / 4, size.height / 4);
+       　this.addChild(spriteB);
+
 
         return true;
     },
