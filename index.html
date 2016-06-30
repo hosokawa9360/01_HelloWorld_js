@@ -7,11 +7,14 @@
     <script type="text/javascript" src="src/myScene.js" charset="UTF-8"></script>
 </head>
 <body>
-    <canvas id="gameCanvas" width="400" height="200"></canvas>
+    <canvas id="gameCanvas" ></canvas>
     <script type="text/javascript">
           window.onload = function(){
               cc.game.onStart = function(){
                   //load resources
+                  //画面の縦横比をドットで指定する  ターゲットの解像度を指定し、ゲームキャンバスをブラウザのウインドサイズに合わせる
+                  cc.view.setDesignResolutionSize(800, 450, cc.ResolutionPolicy.SHOW_ALL);
+
                   cc.LoaderScene.preload(g_resources, function () {
                       cc.director.runScene(new MyScene());
                   }, this);
