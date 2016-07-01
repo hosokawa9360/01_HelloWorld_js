@@ -32,13 +32,34 @@ var MyLayer = cc.Layer.extend({
         this.addChild(drop03);
 
         var drop04 = cc.Sprite.create(res.drop04_png);　
-        drop04.setPosition(size.width * 4/ 6, size.height / 5);　
+        drop04.setPosition(size.width * 4 / 6, size.height / 5);　
         this.addChild(drop04);
 
         var drop05 = cc.Sprite.create(res.drop05_png);　
-        drop05.setPosition(size.width * 5/ 6, size.height / 5);　
+        drop05.setPosition(size.width * 5 / 6, size.height / 5);　
         this.addChild(drop05);
+
+        // タップイベントリスナーを登録する
+        cc.eventManager.addListener({
+            event: cc.EventListener.TOUCH_ONE_BY_ONE,
+            swallowTouches: true,
+            onTouchBegan: this.onTouchBegan,
+            onTouchMoved: this.onTouchMoved,
+            onTouchEnded: this.onTouchEnded
+        }, this);
+
         return true;
+    },
+
+    onTouchBegan: function(touch, event) {
+        return true;
+    },
+
+    onTouchMoved: function(touch, event) {},
+
+    onTouchEnded: function(touch, event) {
+        // 次のシーンに切り替える
+        cc.director.runScene(new NextScene());
     },
 });
 
