@@ -45,18 +45,31 @@ console.log(this.dropSpriteArray);
 */
 
 var backgroundLayer = cc.Layer.extend({
+  sprite: null,
+  dropSpriteArray: null,
+  dropArray: [res.drop01_png, res.drop02_png, res.drop03_png, res.drop04_png, res.drop05_png],
   ctor: function() {
         this._super();
         var size = cc.director.getWinSize();
+        this.dropSpriteArray = new Array();
         var i=1;
-        for(i=1;i<=5; i++){
-          var drop01 = cc.Sprite.create(res.drop01_png);　
-          drop01.setPosition(size.width * i / 6, size.height / 5);　
-          this.addChild(drop01);
+        for(i=0;i<5; i++){
+          this.sprite = new cc.Sprite(this.dropArray[i]);
+          cc.log(i);
+          cc.log(this.dropArray[i]);
+          this.sprite.attr({
+              x:size.width * (i+1) / 6 ,
+              y:size.height * 5 / 6,
+              scale: 1.0,
+              rotation: 0
+          });
+          this.dropSpriteArray.push(this.sprite);
+          // this.addChild(this.sprite);
+          this.addChild(this.dropSpriteArray[i],0);
+        //  var drop01 = cc.Sprite.create(res.drop01_png);　
+        //  drop01.setPosition(size.width * i / 6, size.height / 5);　
+        //  this.addChild(drop01);
         }
-
-
-
         return true;
     },
 });
