@@ -1,3 +1,11 @@
+#### 課題1  
+ランダムな位置に１０個オーブを出現させなさい。  
+
+### 課題2  
+for　文の２重ループを用いて、５×５の格子状にオーブを配置しなさい。
+※配置するオーブはランダム
+
+
 # Cocos2d-JS Single File Engine User Guide
 
 This guide is for the usage of single file engine of Cocos2d-JS which can be retrieved from [the online downloader](http://cocos2d-x.org/filecenter/jsbuilder/).
@@ -51,4 +59,3 @@ While openning the HelloWorld.html, you will receive an error:
 "Failed to load resource: the server responded with a status of 404 (Not Found)" for the file `project.json`
 
 It's not a problem, you can simply igore it, or you can get rid of this error by creating an empty `project.json` file.
-
