@@ -1,11 +1,12 @@
 //resource.js
 var res = {
     HelloWorld_png : "res/HelloWorld.png",
-    Cocos_png : "res/cocos.png",
-    gameicon_1_png : "res/gameicon_1.png",
-    gameicon_2_png : "res/gameicon_2.png",
-    gameicon_3_png : "res/gameicon_3.png",
-    gameicon_4_png : "res/gameicon_4.png",
+    cocos_png : "res/cocos.png",
+    drop01_png : "res/drop01.png",
+    drop02_png : "res/drop02.png",
+    drop03_png : "res/drop03.png",
+    drop04_png : "res/drop04.png",
+    drop05_png : "res/drop05.png",
     
 };
 

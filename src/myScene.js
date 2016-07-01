@@ -1,30 +1,49 @@
 //myScene.js
 var MyLayer = cc.Layer.extend({
-    ctor:function () {
+    ctor: function() {
         this._super();
 
         var size = cc.director.getWinSize();
-/*
-        var sprite = cc.Sprite.create(res.HelloWorld_png);
-        sprite.setPosition(size.width / 2, size.height / 2);
-        sprite.setScale(0.8);
-        this.addChild(sprite, 0);
-*/
+        /*
+                var sprite = cc.Sprite.create(res.HelloWorld_png);
+                sprite.setPosition(size.width / 2, size.height / 2);
+                sprite.setScale(0.8);
+                this.addChild(sprite, 0);
+        */
         var label = cc.LabelTTF.create("Hello World", "Arial", 40);
-        label.setPosition(size.width / 2, size.height / 2);
+        label.setPosition(size.width / 2, size.height * 4 / 5);
         this.addChild(label, 1);
+
+        var cocos_png = cc.Sprite.create(res.cocos_png);
+        cocos_png.setPosition(size.width / 2, size.height / 2);
+        this.addChild(cocos_png);
+
         //add code
-        var spriteB = cc.Sprite.create(res.gameicon_1_png);
-       　spriteB.setPosition(size.width / 4, size.height / 4);
-       　this.addChild(spriteB);
+        var drop01 = cc.Sprite.create(res.drop01_png);　
+        drop01.setPosition(size.width * 1 / 6, size.height / 5);　
+        this.addChild(drop01);
 
+        var drop02 = cc.Sprite.create(res.drop02_png);　
+        drop02.setPosition(size.width * 2 / 6, size.height / 5);　
+        this.addChild(drop02);
 
+        var drop03 = cc.Sprite.create(res.drop03_png);　
+        drop03.setPosition(size.width * 3 / 6, size.height / 5);　
+        this.addChild(drop03);
+
+        var drop04 = cc.Sprite.create(res.drop04_png);　
+        drop04.setPosition(size.width * 4/ 6, size.height / 5);　
+        this.addChild(drop04);
+
+        var drop05 = cc.Sprite.create(res.drop05_png);　
+        drop05.setPosition(size.width * 5/ 6, size.height / 5);　
+        this.addChild(drop05);
         return true;
     },
 });
 
 var MyScene = cc.Scene.extend({
-    onEnter:function () {
+    onEnter: function() {
         this._super();
         var layer = new MyLayer();
         this.addChild(layer);
