@@ -19,6 +19,7 @@ var MyLayer = cc.Layer.extend({
         this.addChild(cocos_png);
 
         //add code
+
         var drop01 = cc.Sprite.create(res.drop01_png);　
         drop01.setPosition(size.width * 1 / 6, size.height / 5);　
         this.addChild(drop01);

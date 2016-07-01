@@ -1,6 +1,6 @@
 //nextScene.js
 var NextLayer = cc.Layer.extend({
-    ctor:function () {
+    ctor: function() {
         this._super();
         var size = cc.director.getWinSize();
 
@@ -12,10 +12,62 @@ var NextLayer = cc.Layer.extend({
     },
 });
 
-var NextScene = cc.Scene.extend({
-    onEnter:function () {
+/*
+var backgroundLayer = cc.Layer.extend({
+    sprite: null,
+    // ブロックを保持しておく配列
+    dropSpriteArray: null,
+    // 配列の宣言　ブロックの名前を指定
+    dropArray:[res.drop01_png, res.drop02_png, res.drop03_png, res.drop04_png, res.drop05_png],
+    ctor: function() {
+        this._super()
+        var size = cc.director.getWinSize();
+
+console.log(this.dropSpriteArray);
+        this.dropSpriteArray = new Array();
+        var i = 0;
+        for (i = 1, i <= 5; i++) {
+            this.sprite = new cc.Sprite(this.dropArray[i]);
+            //this.sprite.setPosition(size.width * i / 6, size.height / 5);　
+            this.sprite.attr({
+                x: size.width * i / 2,
+                y: size.height / 2,
+                scale: 1.0,
+                rotation: 0
+            });
+            this.dropSpriteArray.push(this.sprite);
+            this.addChild(this.dropSpriteArray[i], 0);
+        }
+
+        return true;
+    },
+});
+*/
+
+var backgroundLayer = cc.Layer.extend({
+  ctor: function() {
         this._super();
-        var layer = new NextLayer();
-        this.addChild(layer);
+        var size = cc.director.getWinSize();
+        var i=1;
+        for(i=1;i<=5; i++){
+          var drop01 = cc.Sprite.create(res.drop01_png);　
+          drop01.setPosition(size.width * i / 6, size.height / 5);　
+          this.addChild(drop01);
+        }
+
+
+
+        return true;
+    },
+});
+
+var NextScene = cc.Scene.extend({
+    onEnter: function() {
+        this._super();
+
+        var layer1 = new backgroundLayer();
+        this.addChild(layer1);
+        var layer2 = new NextLayer();
+        this.addChild(layer2);
     }
 });
