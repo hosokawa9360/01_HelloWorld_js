@@ -12,12 +12,11 @@ var MyLayer = cc.Layer.extend({
         */
         var label = cc.LabelTTF.create("Hello World", "Arial", 40);
         label.setPosition(size.width / 2, size.height * 4 / 5);
-        this.addChild(label, 1);
+        this.addChild(label, 4);
 
         var cocos_png = cc.Sprite.create(res.cocos_png);
-        cocos_png.setPosition(size.width / 2, size.height / 2);
+         cocos_png.setPosition(size.width / 2, size.height / 2);
         this.addChild(cocos_png);
-
         //add code
 
         var drop01 = cc.Sprite.create(res.drop01_png);　
@@ -55,9 +54,7 @@ var MyLayer = cc.Layer.extend({
     onTouchBegan: function(touch, event) {
         return true;
     },
-
     onTouchMoved: function(touch, event) {},
-
     onTouchEnded: function(touch, event) {
         // 次のシーンに切り替える
         cc.director.runScene(new NextScene());

@@ -15,3 +15,25 @@ var spriteE = cc.Sprite.create(res.drop05_png);
 spriteE.setPosition(size.width / 2, size.height / 2);
 this.addChild(spriteE);
 */
+/*
+var backgroundLayer = cc.Layer.extend({
+    sprite: null,
+    dropSpriteArray: null,
+    dropArray: [res.drop01_png, res.drop02_png, res.drop03_png, res.drop04_png, res.drop05_png],
+    ctor: function() {
+        this._super();
+        var size = cc.director.getWinSize();
+        this.dropSpriteArray = new Array();
+        var i=1;
+        for(i=1;i<=5; i++){
+          var drop01 = cc.Sprite.create(res.drop01_png);　
+          drop01.setPosition(size.width * i / 6, size.height / 5);　
+          this.addChild(drop01);
+        }
+
+
+
+        return true;
+    },
+});
+*/
