@@ -5,8 +5,32 @@
 for　文の２重ループを用いて、５×５の格子状にオーブを配置しなさい。
 ※配置するオーブはランダム
 
+## 課題3
+名前を変えてgit cloneを行う  
+ - git bush で　一つ上のディレクトリ GitHubに移動する  
+ - git clone https://github.com/hosokawa9360/01_HelloWorld_js.git　 04__ConcentrationGame_js  エラー？
+ - git clone  https://github.com/hosokawa9360/01_HelloWorld_js.git  04__ConcentrationGame_js  
+ - cd 04__ConcentrationGame_js  
+ - git管理から一旦はずす
+ - rm -rf .git/  
+ - resフォルダの画像ﾌｧｲﾙ（cocos.png , drop01.png, drop02.png, drop03.png, drop04.png, drop05.png,HelloWorld.png)を削除する
+ - srcフォルダのnextSnece.js Temporarily.jsは削除する
 
-# Cocos2d-JS Single File Engine User Guide
+- issues #1　に差し替える画像があるので、ダウンロード回答して、resフォルダに入れる。  
+ - git status  
+ - git init  
+ - git add .  
+ - git commit -m "ConcentrationGame first commit"  
+ - 自分のgithub（Web上）でリポジトリを作る　リポジトリ名は　04__ConcionGame_js  
+ - git remote add origin https://github.com/自分のユーザID/04__ConcentrationGame_js.git  
+ - git push -u origin master  
+
+## 課題4
+ - MyScene.jsを編集し、cover.png(64 x 64) が　4　× 4 のグリッドで配置されるようにせよ。
+ cover.png同士の間隔がそれぞれ10ピクセル離れていること。  
+
+
+# Cocos2d-JS Single File Engine User Guide　
 
 This guide is for the usage of single file engine of Cocos2d-JS which can be retrieved from [the online downloader](http://cocos2d-x.org/filecenter/jsbuilder/).
 
