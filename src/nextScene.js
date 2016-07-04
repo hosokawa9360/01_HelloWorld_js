@@ -15,9 +15,9 @@ var NextLayer = cc.Layer.extend({
 
 var dropLayer = cc.Layer.extend({
     sprite: null,
-    // ãƒ–ãƒ­ãƒƒã‚¯ã‚’ä¿æŒã—ã¦ãŠãé…åˆ—
+    // ƒuƒƒbƒN‚ğ•Û‚µ‚Ä‚¨‚­”z—ñ
     dropSpriteArray: null,
-    // é…åˆ—ã®å®£è¨€ã€€ãƒ–ãƒ­ãƒƒã‚¯ã®åå‰ã‚’æŒ‡å®š
+    // ”z—ñ‚ÌéŒ¾@ƒuƒƒbƒN‚Ì–¼‘O‚ğw’è
     dropArray: [res.drop01_png, res.drop02_png, res.drop03_png, res.drop04_png, res.drop05_png],
     ctor: function() {
         this._super();
@@ -41,12 +41,12 @@ var dropLayer = cc.Layer.extend({
             this.addChild(this.dropSpriteArray[i], 0);
 
 
-            //  var drop01 = cc.Sprite.create(res.drop01_png);ã€€
-            //  drop01.setPosition(size.width * i / 6, size.height / 5);ã€€
+            //  var drop01 = cc.Sprite.create(res.drop01_png);@
+            //  drop01.setPosition(size.width * i / 6, size.height / 5);@
             //  this.addChild(drop01);
         }
 
-        // ã‚¿ãƒƒãƒ—ã‚¤ãƒ™ãƒ³ãƒˆãƒªã‚¹ãƒŠãƒ¼ã‚’ç™»éŒ²ã™ã‚‹
+        // ƒ^ƒbƒvƒCƒxƒ“ƒgƒŠƒXƒi[‚ğ“o˜^‚·‚é
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: true,
@@ -69,13 +69,13 @@ var NextScene = cc.Scene.extend({
     onEnter: function() {
         this._super();
 
-        // èƒŒæ™¯ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ãã®å ´ã§ä½œã‚‹
+        // ”wŒiƒŒƒCƒ„[‚ğ‚»‚Ìê‚Åì‚é
         var backgroundLayer = new cc.LayerColor(new cc.Color(140, 200, 140, 128));
         this.addChild(backgroundLayer);
 
         var layer1 = new dropLayer();
         this.addChild(layer1);
-        // ä¸€ç§’å¾Œã«ã‚ªãƒ¼ãƒ–ãŒæ¶ˆãˆã‚‹
+        // ˆê•bŒã‚ÉƒI[ƒu‚ªÁ‚¦‚é
         setTimeout(function() {
             layer1.removeAllChildren();
         }, 1000);

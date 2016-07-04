@@ -1,36 +1,36 @@
-#### èª²é¡Œ1  
-ãƒ©ãƒ³ãƒ€ãƒ ãªä½ç½®ã«ï¼‘ï¼å€‹ã‚ªãƒ¼ãƒ–ã‚’å‡ºç¾ã•ã›ãªã•ã„ã€‚  
+#### ‰Û‘è1  
+ƒ‰ƒ“ƒ_ƒ€‚ÈˆÊ’u‚É‚P‚OŒÂƒI[ƒu‚ğoŒ»‚³‚¹‚È‚³‚¢B  
 
-### èª²é¡Œ2  
-forã€€æ–‡ã®ï¼’é‡ãƒ«ãƒ¼ãƒ—ã‚’ç”¨ã„ã¦ã€ï¼•Ã—ï¼•ã®æ ¼å­çŠ¶ã«ã‚ªãƒ¼ãƒ–ã‚’é…ç½®ã—ãªã•ã„ã€‚
-â€»é…ç½®ã™ã‚‹ã‚ªãƒ¼ãƒ–ã¯ãƒ©ãƒ³ãƒ€ãƒ 
+### ‰Û‘è2  
+for@•¶‚Ì‚Qdƒ‹[ƒv‚ğ—p‚¢‚ÄA‚T~‚T‚ÌŠiqó‚ÉƒI[ƒu‚ğ”z’u‚µ‚È‚³‚¢B
+¦”z’u‚·‚éƒI[ƒu‚Íƒ‰ƒ“ƒ_ƒ€
 
-## èª²é¡Œ3
-åå‰ã‚’å¤‰ãˆã¦git cloneã‚’è¡Œã†  
- - git bush ã§ã€€ä¸€ã¤ä¸Šã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª GitHubã«ç§»å‹•ã™ã‚‹  
- - git clone https://github.com/hosokawa9360/01_HelloWorld_js.gitã€€ 04__ConcentrationGame_js  ã‚¨ãƒ©ãƒ¼ï¼Ÿ
+## ‰Û‘è3
+–¼‘O‚ğ•Ï‚¦‚Ägit clone‚ğs‚¤  
+ - git bush ‚Å@ˆê‚Âã‚ÌƒfƒBƒŒƒNƒgƒŠ GitHub‚ÉˆÚ“®‚·‚é  
+ - git clone https://github.com/hosokawa9360/01_HelloWorld_js.git@ 04__ConcentrationGame_js  ƒGƒ‰[H
  - git clone  https://github.com/hosokawa9360/01_HelloWorld_js.git  04__ConcentrationGame_js  
  - cd 04__ConcentrationGame_js  
- - gitç®¡ç†ã‹ã‚‰ä¸€æ—¦ã¯ãšã™
+ - gitŠÇ—‚©‚çˆê’U‚Í‚¸‚·
  - rm -rf .git/  
- - resãƒ•ã‚©ãƒ«ãƒ€ã®ç”»åƒï¾Œï½§ï½²ï¾™ï¼ˆcocos.png , drop01.png, drop02.png, drop03.png, drop04.png, drop05.png,HelloWorld.png)ã‚’å‰Šé™¤ã™ã‚‹
- - srcãƒ•ã‚©ãƒ«ãƒ€ã®nextSnece.js Temporarily.jsã¯å‰Šé™¤ã™ã‚‹
+ - resƒtƒHƒ‹ƒ_‚Ì‰æ‘œÌ§²Ùicocos.png , drop01.png, drop02.png, drop03.png, drop04.png, drop05.png,HelloWorld.png)‚ğíœ‚·‚é
+ - srcƒtƒHƒ‹ƒ_‚ÌnextSnece.js Temporarily.js‚Ííœ‚·‚é
 
-- issues #1ã€€ã«å·®ã—æ›¿ãˆã‚‹ç”»åƒãŒã‚ã‚‹ã®ã§ã€ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰å›ç­”ã—ã¦ã€resãƒ•ã‚©ãƒ«ãƒ€ã«å…¥ã‚Œã‚‹ã€‚  
+- issues #1@‚É·‚µ‘Ö‚¦‚é‰æ‘œ‚ª‚ ‚é‚Ì‚ÅAƒ_ƒEƒ“ƒ[ƒh‰ñ“š‚µ‚ÄAresƒtƒHƒ‹ƒ_‚É“ü‚ê‚éB  
  - git status  
  - git init  
  - git add .  
  - git commit -m "ConcentrationGame first commit"  
- - è‡ªåˆ†ã®githubï¼ˆWebä¸Šï¼‰ã§ãƒªãƒã‚¸ãƒˆãƒªã‚’ä½œã‚‹ã€€ãƒªãƒã‚¸ãƒˆãƒªåã¯ã€€04__ConcionGame_js  
- - git remote add origin https://github.com/è‡ªåˆ†ã®ãƒ¦ãƒ¼ã‚¶ID/04__ConcentrationGame_js.git  
+ - ©•ª‚ÌgithubiWebãj‚ÅƒŠƒ|ƒWƒgƒŠ‚ğì‚é@ƒŠƒ|ƒWƒgƒŠ–¼‚Í@04__ConcionGame_js  
+ - git remote add origin https://github.com/©•ª‚Ìƒ†[ƒUID/04__ConcentrationGame_js.git  
  - git push -u origin master  
 
-## èª²é¡Œ4
- - MyScene.jsã‚’ç·¨é›†ã—ã€cover.png(64 x 64) ãŒã€€4ã€€Ã— 4 ã®ã‚°ãƒªãƒƒãƒ‰ã§é…ç½®ã•ã‚Œã‚‹ã‚ˆã†ã«ã›ã‚ˆã€‚
- cover.pngåŒå£«ã®é–“éš”ãŒãã‚Œãã‚Œ10ãƒ”ã‚¯ã‚»ãƒ«é›¢ã‚Œã¦ã„ã‚‹ã“ã¨ã€‚  
+## ‰Û‘è4
+ - MyScene.js‚ğ•ÒW‚µAcover.png(64 x 64) ‚ª@4@~ 4 ‚ÌƒOƒŠƒbƒh‚Å”z’u‚³‚ê‚é‚æ‚¤‚É‚¹‚æB
+ cover.png“¯m‚ÌŠÔŠu‚ª‚»‚ê‚¼‚ê10ƒsƒNƒZƒ‹—£‚ê‚Ä‚¢‚é‚±‚ÆB  
 
 
-# Cocos2d-JS Single File Engine User Guideã€€
+# Cocos2d-JS Single File Engine User Guide@
 
 This guide is for the usage of single file engine of Cocos2d-JS which can be retrieved from [the online downloader](http://cocos2d-x.org/filecenter/jsbuilder/).
 

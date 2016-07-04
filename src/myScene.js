@@ -19,27 +19,27 @@ var MyLayer = cc.Layer.extend({
         this.addChild(cocos_png);
         //add code
 
-        var drop01 = cc.Sprite.create(res.drop01_png);ã€€
-        drop01.setPosition(size.width * 1 / 6, size.height / 5);ã€€
+        var drop01 = cc.Sprite.create(res.drop01_png);@
+        drop01.setPosition(size.width * 1 / 6, size.height / 5);@
         this.addChild(drop01);
 
-        var drop02 = cc.Sprite.create(res.drop02_png);ã€€
-        drop02.setPosition(size.width * 2 / 6, size.height / 5);ã€€
+        var drop02 = cc.Sprite.create(res.drop02_png);@
+        drop02.setPosition(size.width * 2 / 6, size.height / 5);@
         this.addChild(drop02);
 
-        var drop03 = cc.Sprite.create(res.drop03_png);ã€€
-        drop03.setPosition(size.width * 3 / 6, size.height / 5);ã€€
+        var drop03 = cc.Sprite.create(res.drop03_png);@
+        drop03.setPosition(size.width * 3 / 6, size.height / 5);@
         this.addChild(drop03);
 
-        var drop04 = cc.Sprite.create(res.drop04_png);ã€€
-        drop04.setPosition(size.width * 4 / 6, size.height / 5);ã€€
+        var drop04 = cc.Sprite.create(res.drop04_png);@
+        drop04.setPosition(size.width * 4 / 6, size.height / 5);@
         this.addChild(drop04);
 
-        var drop05 = cc.Sprite.create(res.drop05_png);ã€€
-        drop05.setPosition(size.width * 5 / 6, size.height / 5);ã€€
+        var drop05 = cc.Sprite.create(res.drop05_png);@
+        drop05.setPosition(size.width * 5 / 6, size.height / 5);@
         this.addChild(drop05);
 
-        // ã‚¿ãƒƒãƒ—ã‚¤ãƒ™ãƒ³ãƒˆãƒªã‚¹ãƒŠãƒ¼ã‚’ç™»éŒ²ã™ã‚‹
+        // ƒ^ƒbƒvƒCƒxƒ“ƒgƒŠƒXƒi[‚ğ“o˜^‚·‚é
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: true,
@@ -56,7 +56,7 @@ var MyLayer = cc.Layer.extend({
     },
     onTouchMoved: function(touch, event) {},
     onTouchEnded: function(touch, event) {
-        // æ¬¡ã®ã‚·ãƒ¼ãƒ³ã«åˆ‡ã‚Šæ›¿ãˆã‚‹
+        // Ÿ‚ÌƒV[ƒ“‚ÉØ‚è‘Ö‚¦‚é
         cc.director.runScene(new NextScene());
     },
 });
