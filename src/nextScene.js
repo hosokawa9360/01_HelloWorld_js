@@ -15,9 +15,9 @@ var NextLayer = cc.Layer.extend({
 
 var dropLayer = cc.Layer.extend({
     sprite: null,
-    // ƒuƒƒbƒN‚ğ•Û‚µ‚Ä‚¨‚­”z—ñ
+    // ãƒ–ãƒ­ãƒƒã‚¯ã‚’ä¿æŒã—ã¦ãŠãé…åˆ—
     dropSpriteArray: null,
-    // ”z—ñ‚ÌéŒ¾@ƒuƒƒbƒN‚Ì–¼‘O‚ğw’è
+    // é…åˆ—ã®å®£è¨€ã€€ãƒ–ãƒ­ãƒƒã‚¯ã®åå‰ã‚’æŒ‡å®š
     dropArray: [res.drop01_png, res.drop02_png, res.drop03_png, res.drop04_png, res.drop05_png],
     ctor: function() {
         this._super();
@@ -27,6 +27,7 @@ var dropLayer = cc.Layer.extend({
         var i = 1;
         for (i = 0; i < 5; i++) {
             var rnd = Math.floor(Math.random() * 5);
+
             this.sprite = new cc.Sprite(this.dropArray[rnd]);
             cc.log(i);
             cc.log(this.dropArray[i]);
@@ -41,12 +42,12 @@ var dropLayer = cc.Layer.extend({
             this.addChild(this.dropSpriteArray[i], 0);
 
 
-            //  var drop01 = cc.Sprite.create(res.drop01_png);@
-            //  drop01.setPosition(size.width * i / 6, size.height / 5);@
+            //  var drop01 = cc.Sprite.create(res.drop01_png);ã€€
+            //  drop01.setPosition(size.width * i / 6, size.height / 5);ã€€
             //  this.addChild(drop01);
         }
 
-        // ƒ^ƒbƒvƒCƒxƒ“ƒgƒŠƒXƒi[‚ğ“o˜^‚·‚é
+        // ã‚¿ãƒƒãƒ—ã‚¤ãƒ™ãƒ³ãƒˆãƒªã‚¹ãƒŠãƒ¼ã‚’ç™»éŒ²ã™ã‚‹
         cc.eventManager.addListener({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: true,
@@ -69,13 +70,13 @@ var NextScene = cc.Scene.extend({
     onEnter: function() {
         this._super();
 
-        // ”wŒiƒŒƒCƒ„[‚ğ‚»‚Ìê‚Åì‚é
+        // èƒŒæ™¯ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ãã®å ´ã§ä½œã‚‹
         var backgroundLayer = new cc.LayerColor(new cc.Color(140, 200, 140, 128));
         this.addChild(backgroundLayer);
 
         var layer1 = new dropLayer();
         this.addChild(layer1);
-        // ˆê•bŒã‚ÉƒI[ƒu‚ªÁ‚¦‚é
+        // ä¸€ç§’å¾Œã«ã‚ªãƒ¼ãƒ–ãŒæ¶ˆãˆã‚‹
         setTimeout(function() {
             layer1.removeAllChildren();
         }, 1000);

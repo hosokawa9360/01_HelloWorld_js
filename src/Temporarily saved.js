@@ -26,8 +26,8 @@ var backgroundLayer = cc.Layer.extend({
         this.dropSpriteArray = new Array();
         var i=1;
         for(i=1;i<=5; i++){
-          var drop01 = cc.Sprite.create(res.drop01_png);@
-          drop01.setPosition(size.width * i / 6, size.height / 5);@
+          var drop01 = cc.Sprite.create(res.drop01_png);ã€€
+          drop01.setPosition(size.width * i / 6, size.height / 5);ã€€
           this.addChild(drop01);
         }
 
