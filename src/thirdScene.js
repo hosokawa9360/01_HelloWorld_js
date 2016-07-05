@@ -6,12 +6,8 @@ var ThirdLayer = cc.Layer.extend({
         var size = cc.director.getWinSize();
 
         var label = cc.LabelTTF.create("Game Over!!", "Arial", 26);
-        label.setPosition(size.width / 2, size.height / 2);
+        label.setPosition(size.width / 2, size.height *5 / 6);
         this.addChild(label, 1);
-
-
-
-
 
         // タップイベントリスナーを登録する
         cc.eventManager.addListener({
@@ -31,6 +27,7 @@ var ThirdLayer = cc.Layer.extend({
         cc.director.runScene(new MyScene());
     },
 });
+//格子状にドロップを配置するレイヤ
 
 var latticeLayer = cc.Layer.extend({
     sprite: null,
@@ -43,14 +40,13 @@ var latticeLayer = cc.Layer.extend({
         var size = cc.director.getWinSize();
 
         this.dropSpriteArray = new Array();
-        var i = 0;
-        for (i = 0; i < 5; i++) {
+        for (var i = 0; i < 5; i++) {
             for (var j = 0; j < 5; j++) {
                 var rnd = Math.floor(Math.random() * 5);
                 this.sprite = new cc.Sprite(this.dropArray[rnd]);
                 this.sprite.attr({
                     x: size.height *0.1 + 60 * j,
-                    y: size.height *0.3 + 65 * i,
+                    y: size.height *0.2 + 65 * i,
                     scale: 1.0,
                     rotation: 0
                 });
@@ -62,7 +58,6 @@ var latticeLayer = cc.Layer.extend({
     }
 });
 
-
 var ThirdScene = cc.Scene.extend({
     onEnter: function() {
         this._super();
@@ -70,10 +65,12 @@ var ThirdScene = cc.Scene.extend({
         // 背景レイヤーをその場で作る
         var backgroundLayer = new cc.LayerColor(new cc.Color(0, 200, 140, 128));
         this.addChild(backgroundLayer);
-
-        var layer3 = new ThirdLayer();
-        this.addChild(layer3);
+        //格子状に配置するレイヤー
         var layer4 = new latticeLayer();
         this.addChild(layer4);
+        //ラベルとタップイベント取得
+        var layer3 = new ThirdLayer();
+        this.addChild(layer3);
+
     }
 });
