@@ -63,7 +63,7 @@ var dropLayer = cc.Layer.extend({
     },
     onTouchMoved: function(touch, event) {},
     onTouchEnded: function(touch, event) {
-        cc.director.runScene(new MyScene());
+        cc.director.runScene(new ThirdScene());
     },
 });
 

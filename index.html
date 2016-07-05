@@ -6,6 +6,7 @@
     <script type="text/javascript" src="src/resource.js" charset="UTF-8"></script>
     <script type="text/javascript" src="src/myScene.js" charset="UTF-8"></script>
     <script type="text/javascript" src="src/nextScene.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="src/thirdScene.js" charset="UTF-8"></script>
 </head>
 <body>
     <canvas id="gameCanvas" ></canvas>
@@ -20,7 +21,7 @@
                   cc.view.setDesignResolutionSize(320, 480, cc.ResolutionPolicy.SHOW_ALL);
                   // 表示領域がリサイズされた場合、自動的にプログラムの画面をリサイズさせる
                   cc.view.resizeWithBrowserSize(true);
-                  
+
                   cc.LoaderScene.preload(g_resources, function () {
                       cc.director.runScene(new MyScene());
                   }, this);
