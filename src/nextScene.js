@@ -27,7 +27,6 @@ var dropLayer = cc.Layer.extend({
         var i = 1;
         for (i = 0; i < 5; i++) {
             var rnd = Math.floor(Math.random() * 5);
-
             this.sprite = new cc.Sprite(this.dropArray[rnd]);
             cc.log(i);
             cc.log(this.dropArray[i]);
