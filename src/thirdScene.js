@@ -39,14 +39,14 @@ var latticeLayer = cc.Layer.extend({
         this._super();
         var size = cc.director.getWinSize();
 
-        this.dropSpriteArray = new Array();
+        //this.dropSpriteArray = new Array();
         for (var i = 0; i < 5; i++) {
             for (var j = 0; j < 5; j++) {
                 var rnd = Math.floor(Math.random() * 5);
                 this.sprite = new cc.Sprite(this.dropArray[rnd]);
                 this.sprite.attr({
-                    x: size.height *0.1 + 60 * j,
-                    y: size.height *0.2 + 65 * i,
+                    x: size.height *0.1 + 50 * j,
+                    y: size.height *0.2 + 50 * i,
                     scale: 1.0,
                     rotation: 0
                 });

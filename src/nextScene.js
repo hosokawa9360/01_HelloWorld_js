@@ -78,10 +78,11 @@ var NextScene = cc.Scene.extend({
         var layer1 = new dropLayer();
         this.addChild(layer1);
         // 一秒後にオーブが消える
+        /*
         setTimeout(function() {
             layer1.removeAllChildren();
         }, 1000);
-
+*/
         var layer2 = new NextLayer();
         this.addChild(layer2);
     }
