@@ -25,15 +25,17 @@ var dropLayer = cc.Layer.extend({
 
         this.dropSpriteArray = new Array();
         var i = 1;
-        for (i = 0; i < 5; i++) {
+        for (i = 0; i < 10; i++) {
             var rnd = Math.floor(Math.random() * 5);
             this.sprite = new cc.Sprite(this.dropArray[rnd]);
             cc.log(i);
             cc.log(this.dropArray[i]);
             this.sprite.attr({
-                x: size.width * (i + 1) / 6,
-                y: size.height * 5 / 6,
-                scale: 1.0,
+            //    x: size.width * (i + 1) / 6,
+            //    y: size.height * 5 / 6,
+                x: size.width * (i + 1) / 10,
+                y: size.height * Math.random(),
+                scale: 0.1 + Math.random() * 1.9,
                 rotation: 0
             });
             this.dropSpriteArray.push(this.sprite);
@@ -61,7 +63,7 @@ var dropLayer = cc.Layer.extend({
     },
     onTouchMoved: function(touch, event) {},
     onTouchEnded: function(touch, event) {
-        cc.director.runScene(new MyScene());
+        cc.director.runScene(new ThirdScene());
     },
 });
 
@@ -76,10 +78,11 @@ var NextScene = cc.Scene.extend({
         var layer1 = new dropLayer();
         this.addChild(layer1);
         // 一秒後にオーブが消える
+        /*
         setTimeout(function() {
             layer1.removeAllChildren();
         }, 1000);
-
+*/
         var layer2 = new NextLayer();
         this.addChild(layer2);
     }
